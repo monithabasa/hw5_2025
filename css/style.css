@@ -188,6 +188,9 @@ a, a:link, a:visited, a:hover, a:active {
     
     
 /* Step 21: adding thumbs up entity */
+.card ul > li:nth-child(2)::after {
+    content: "👍";
+}
 }    
     
     
