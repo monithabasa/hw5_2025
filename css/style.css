@@ -10,10 +10,10 @@ opacity of 0 and end with opacity of 1. animation should be 5 seconds only when 
         opacity: 1;
     }
 }
-.logo {
+#logo {
     display: block; 
     opacity: 0; 
-    animation: logoAnimation 5s ease-in-out forwards !important;
+    animation: logoAnimation 5s ease-in-out forwards;
 }
 
 
@@ -144,58 +144,47 @@ a, a:link, a:visited, a:hover, a:active {
     }
 }    
 
-
+/* Print View */
 @media print and (orientation: portrait) {
     body {
+        /* Step 15: change font to arial with backup of Helvetica */
         font-family: Arial, Helvetica;
         /* Step 16:
         The background image should be removed. */
         background-image: none;
     }
 
+    /* Step 17: edit nav links so they are spaced out */
+    .nav_links {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 160px; 
+        width: 50%;
+    }
+
+    /* Step 18: edit pricing class*/
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
     
-/* Step 15: change font to arial with backup of Helvetica */
-body{
-    font-family: Arial, Helvetica;
-}
-    
-/* Step 16: remove background image */
-body{
-    background-image: none;
-}
-    
-    
-/* Step 17: edit nav links so they are spaced out */
-.nav_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-    
-    
-/* Step 18: edit pricing class*/
-.pricing{
-    display: flex;
-    flex-direction: row;
-}
-    
-    
-/* Step 19: card element formatting */
-.card {
-    background: #288088;
-    border: 2px solid #45ADDD;
-    flex-basis: 325px;
-}
-    
-/* Step 20: no part of the gallery should be visible*/
-/* step 20: hiding gallery */
-.gallery {
-    display: none;
-}
-h2.gallery-title {
-    display: none;
-}
+    /* Step 19: card element formatting */
+    .card {
+        
+        border: 2px solid #45ADDD;
+        flex-basis: 325px; 
+    }
+
+    /* Step 20: no part of the gallery should be visible*/
+    .gallery {
+        display: none;
+    }
+
+    h2#gallery {
+        display: none;
+    }
     
     
 /* Step 21: adding thumbs up entity */
